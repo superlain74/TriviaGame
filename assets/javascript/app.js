@@ -3,7 +3,7 @@ $('#start').on('click', function() {
 })
 
 $(document).on('click', '#end', function() {
-	game.done();
+    game.done();
 })
 
 var questions = [{
@@ -146,11 +146,11 @@ var game = {
         this.result();
     },
     result: function() {
-    	clearInterval(timer);
-    	$('#subwrapper h2').remove();
-    	$('#subwrapper').html("<h2>All done!</h2>");
-    	$('#subwrapper').append("<h3>Correct Answer: "+this.correct+"</h3>");
-    	$('#subwrapper').append("<h3>Incorrect Answer: "+this.incorrect+"</h3>");
-    	$('#subwrapper').append("<h3>Unanswered: "+(questions.length-(this.incorrect+this.correct))+"</h3>");
+        clearInterval(timer);
+        $('#subwrapper h2').remove();
+        $('#subwrapper').html("<h2>All done!</h2>");
+        $('#subwrapper').append("<h3>Correct Answer: " + this.correct + "</h3>");
+        $('#subwrapper').append("<h3>Incorrect Answer: " + this.incorrect + "</h3>");
+        $('#subwrapper').append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
     }
 }
